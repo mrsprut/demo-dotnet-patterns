@@ -7,6 +7,7 @@ namespace AbstractFactory
     {
         static void Main(string[] args)
         {
+// my comment
             List<Client> clients = new List<Client>() {
               new Client(new CocaColaFactory()),
               new Client(new PepsiFactory()),
