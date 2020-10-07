@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AbstractFactory
 {
@@ -6,7 +7,16 @@ namespace AbstractFactory
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<Client> clients = new List<Client>() {
+              new Client(new CocaColaFactory()),
+              new Client(new PepsiFactory()),
+              new Client(new FantaFactory())
+            };
+
+            foreach (Client client in clients)
+            {
+                client.Run();
+            }
         }
     }
 }
